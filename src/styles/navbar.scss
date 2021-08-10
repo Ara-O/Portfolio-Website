@@ -1,0 +1,33 @@
+// @import url(https://allfont.net/allfont.css?fonts=agency-fb);
+// @import url(https://allfont.net/allfont.css?fonts=agency-fb-bold);
+
+ul {
+  color: white;
+  position: absolute;
+  right: 247px;
+  top: 27px;
+  z-index: 4;
+}
+
+* {
+  font-family: "Agency FB";
+}
+
+#nav {
+  li {
+    display: inline;
+    margin-right: 87px;
+    font-size: 17px;
+    cursor: pointer;
+    font-family: "Agency FB";
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    height: 3px;
+    background: #da0000;
+    width: 23px;
+  }
+}
