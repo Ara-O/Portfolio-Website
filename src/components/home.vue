@@ -10,14 +10,30 @@
         <h5 class="my--desc">
           Freshman at the University of Detroit Mercy studying Computer Science
         </h5>
+        <div class="CTAS">
+          <mainbtn
+            bgcolor="#DA0000"
+            textcolor="white"
+            btntext="My Works"
+          ></mainbtn>
+          <mainbtn
+            bgcolor="white"
+            textcolor="black"
+            btntext="Contact Me"
+          ></mainbtn>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import mainbtn from "../helpers/button.vue";
 export default {
   name: "Home",
+  components: {
+    mainbtn,
+  },
 };
 </script>
 
