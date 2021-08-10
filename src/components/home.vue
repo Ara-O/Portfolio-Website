@@ -6,7 +6,10 @@
     <div class="hero--header">
       <div class="arrange">
         <h5 class="intro">Hi, I am</h5>
-        <h3 class="name">Eyiara Oladipo</h3>
+        <h3 class="name">
+          Eyiara Olad<span><span class="letteri">i</span></span
+          >po
+        </h3>
         <h5 class="my--desc">
           Freshman at the University of Detroit Mercy studying Computer Science
         </h5>
@@ -23,6 +26,11 @@
           ></mainbtn>
         </div>
       </div>
+    </div>
+    <div class="threedots">
+      <div class="indicator indicator one"></div>
+      <div class="indicator two"></div>
+      <div class="indicator three"></div>
     </div>
   </div>
 </template>

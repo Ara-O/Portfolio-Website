@@ -22,12 +22,22 @@ ul {
     font-family: "Agency FB";
   }
 
-  li::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    height: 3px;
-    background: #da0000;
-    width: 23px;
-  }
+  // li::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: -10px;
+  //   height: 3px;
+  //   background: #da0000;
+  //   width: 23px;
+  // }
+}
+
+.red {
+  display: inline;
+  height: 3px;
+  background: #da0000;
+  width: 23px;
+  position: absolute;
+  top: -10px;
+  transition: all 400ms ease-in;
 }
