@@ -3,15 +3,15 @@
     <ul class="navbar">
       <span>
         <div class="red"></div>
-        <li>About Me</li>
+        <li tabindex="1">About Me</li>
       </span>
       <span>
         <div class="red"></div>
-        <li>Skills</li>
+        <li tabindex="2">Skills</li>
       </span>
       <span>
         <div class="red"></div>
-        <li>Contact Me</li>
+        <li tabindex="3">Contact Me</li>
       </span>
     </ul>
   </nav>

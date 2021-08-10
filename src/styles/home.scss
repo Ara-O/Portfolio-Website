@@ -11,6 +11,10 @@
   font-family: "Agency FBL";
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   margin: 0px;
   background: black;
@@ -37,7 +41,8 @@ img.bg-img {
   height: 100vh;
   width: 50%;
   position: absolute;
-  background: linear-gradient(90deg, #00000036 19%, #000000e6 87%);
+  background: linear-gradient(90deg, #00000036 19%, #000000e6 87%),
+    linear-gradient(349deg, black, transparent 34%);
 }
 
 .name {
@@ -51,7 +56,7 @@ img.bg-img {
 
 .arrange {
   margin-left: 186px;
-  margin-top: 227px;
+  margin-top: 215px;
   color: white;
   display: inline-block;
 }
@@ -81,7 +86,6 @@ h5.my--desc {
 }
 
 .threedots {
-  position: absolute;
   right: 30px;
   height: 100vh;
   flex-direction: column;
@@ -89,6 +93,7 @@ h5.my--desc {
   display: flex;
   align-items: center;
   row-gap: 10px;
+  position: fixed;
 }
 
 .indicator {
@@ -110,4 +115,16 @@ h5.my--desc {
   margin-left: -57.2px;
   height: 8px;
   background: #da0000;
+}
+
+// -- ABOUT ME  --
+
+.aboutme {
+  display: grid;
+  grid-template-columns: 40% 10% 50%;
+  color: white;
+  padding-top: 50px;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(60deg, black, #3a3a3a 307%);
 }

@@ -20,5 +20,6 @@ export default {
   font-family: "Agency FB";
   padding: 0px 25px;
   cursor: pointer;
+  transition: all 1s ease-in-out;
 }
 </style>
