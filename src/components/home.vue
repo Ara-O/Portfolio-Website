@@ -55,9 +55,11 @@
     </div>
     <div class="aboutme--right">
       <h2 style="font-size: 39px">TL;DR</h2>
-      <h4 style="font-size: 21px">Name: Eyiara "Ara" Oladipo</h4>
-      <h4 style="font-size: 21px">Age: 16 years old</h4>
-      <h4 style="font-size: 21px">
+      <h4 style="font-size: 18px; font-weight: 100">
+        Name: Eyiara "Ara" Oladipo
+      </h4>
+      <h4 style="font-size: 18px; font-weight: 100">Age: 16 years old</h4>
+      <h4 style="font-size: 18px; font-weight: 100">
         SKills: HTML | CSS | JS | Vue.js | Firebase
       </h4>
     </div>
