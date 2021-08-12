@@ -1,6 +1,5 @@
 $gradient2: #454545;
 $accentcolor: #da0000;
-
 @font-face {
   font-family: "Agency FB";
   src: local("Agency FB"), url("../assets/Agency_FB.ttf");
@@ -13,20 +12,16 @@ $accentcolor: #da0000;
   font-family: "Agency FBLL";
   src: local("Agency FBLL"), url("../assets/AgencyFBLight.ttf");
 }
-
 * {
   font-family: "Agency FBL";
 }
-
 body::-webkit-scrollbar {
   display: none;
 }
-
 body {
   margin: 0px;
   background: black;
 }
-
 img.bg-img {
   width: 975px;
   position: absolute;
@@ -35,7 +30,6 @@ img.bg-img {
   margin-left: -78px;
   filter: contrast(1) brightness(0.7);
 }
-
 .hero--header {
   height: 100vh;
   float: right;
@@ -45,7 +39,6 @@ img.bg-img {
   background: linear-gradient(90deg, black 49%, $gradient2 154%);
   width: 55%;
 }
-
 .blend {
   height: 100vh;
   width: 50%;
@@ -54,7 +47,6 @@ img.bg-img {
     linear-gradient(349deg, black, transparent 34%),
     linear-gradient(191deg, black -23%, transparent);
 }
-
 .name {
   color: white;
   z-index: 30;
@@ -63,13 +55,11 @@ img.bg-img {
   margin-top: 15px;
   margin-bottom: 2px;
 }
-
 .arrange {
   margin-left: 186px;
   color: white;
   display: inline-block;
 }
-
 .intro {
   color: white;
   font-size: 16px;
@@ -78,7 +68,6 @@ img.bg-img {
   letter-spacing: 1.3px;
   font-weight: 300;
 }
-
 h5.my--desc {
   width: 341px;
   font-size: 18px;
@@ -88,12 +77,10 @@ h5.my--desc {
   font-family: "Agency FBL";
   font-weight: 300;
 }
-
 .CTAS {
   display: flex;
   column-gap: 20px;
 }
-
 .threedots {
   right: 30px;
   height: 100vh;
@@ -104,18 +91,15 @@ h5.my--desc {
   row-gap: 10px;
   position: fixed;
 }
-
 .indicator {
   height: 13px;
   background-color: rgb(160, 160, 160);
   width: 13px;
   border-radius: 20px;
 }
-
 .one {
   background-color: $accentcolor;
 }
-
 .name::after {
   content: "";
   position: absolute;
@@ -125,9 +109,6 @@ h5.my--desc {
   height: 8px;
   background: $accentcolor;
 }
-
-// -- ABOUT ME  --
-
 .aboutme {
   display: flex;
   color: white;
@@ -138,13 +119,11 @@ h5.my--desc {
   height: 100vh;
   background: linear-gradient(85deg, black 76%, $gradient2 123%);
 }
-
 .aboutme--left {
   display: grid;
   max-width: 411px;
   grid-template-rows: 31% 50% 20%;
 }
-
 .aboutmedesc {
   margin-top: -20px;
   font-size: 18px;
@@ -153,26 +132,22 @@ h5.my--desc {
   font-family: "Agency FBLL";
   font-weight: 100;
 }
-
 .aboutmetext {
   display: flex;
   font-size: 57px;
   align-items: flex-end;
 }
-
 .divider-div {
   display: flex;
   justify-content: center;
   padding-top: 200px;
 }
-
 .divider {
   width: 9px;
   background: #ec0000;
   height: 126px;
   border-radius: 41px;
 }
-
 .aboutme--right {
   width: 377px;
   padding-left: 43px;
@@ -182,4 +157,27 @@ h5.my--desc {
   border-radius: 4px;
   height: 446px;
   color: black;
+}
+.tldr {
+  font-size: 21px;
+  font-weight: 100;
+  letter-spacing: 0.7px;
+}
+.projects {
+  height: 100vh;
+  padding-left: 40px;
+  background: linear-gradient(85deg, black 82%, #454545 123%);
+  color: white;
+}
+
+section.project2 {
+  width: 494px;
+}
+.project1 {
+  width: auto;
+}
+
+.bothprojects {
+  display: flex;
+  justify-content: center;
 }
