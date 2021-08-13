@@ -14,16 +14,8 @@
           Freshman at the University of Detroit Mercy studying Computer Science
         </h5>
         <div class="CTAS">
-          <mainbtn
-            bgcolor="#DA0000"
-            textcolor="white"
-            btntext="My Works"
-          ></mainbtn>
-          <mainbtn
-            bgcolor="#white"
-            textcolor="black"
-            btntext="Contact Me"
-          ></mainbtn>
+          <mainbtn bgcolor="#DA0000" textcolor="white">My Works</mainbtn>
+          <mainbtn bgcolor="#white" textcolor="black">Contact Me</mainbtn>
         </div>
       </div>
     </div>
@@ -61,39 +53,81 @@
       <mainbtn
         bgcolor="linear-gradient(126deg, black, rgb(102 102 102))"
         textcolor="white"
-        btntext="Resume"
-      ></mainbtn>
+        >Resume</mainbtn
+      >
       <mainbtn
         bgcolor="linear-gradient(136deg, #790000, #da0000)"
         textcolor="white"
-        btntext="View Contact Info"
         style="margin-left: 20px"
-      ></mainbtn>
+        >View Contact Info</mainbtn
+      >
     </div>
   </section>
   <section class="projects">
-    <h2 style="margin-top: 0px">Projects</h2>
+    <h2 style="font-size: 50px; text-align: center; margin-bottom: -8px">
+      Projects
+    </h2>
     <div class="bothprojects">
       <section class="project1">
+        <project
+          githuburl="https://github.com/Ara-O/Anime_Finder"
+          demourl="https://animesfinder.netlify.app/"
+          iframeurl="https://animesfinder.netlify.app/"
+        >
+          <template #projectname>Anime Finder</template>
+          <template #toolsused>HTML | CSS | Javascript | Vue.js</template>
+          <template #description>
+            Used the Vue.js CLI, Javascript, and various API calls, to create a
+            site where users can search for, and read more about different anime
+            shows</template
+          >
+        </project>
+      </section>
+      <!-- Second project -->
+      <section class="project2">
         <div class="iframes">
           <iframe
-            width="1181px"
-            height="650px"
+            width="1135px"
+            height="750px"
             src="https://animesfinder.netlify.app/"
-            style="transform: scale(0.75) translate(-195px, -80px)"
+            style="transform: scale(0.55) translate(-195px, -80px)"
           ></iframe>
         </div>
-        <div class="projectdescr"></div>
+        <div class="projectdescr">
+          <img src="../assets/icons8-arrow-60.png" alt="" class="backarrow" />
+          <h3 style="font-size: 33px; margin-bottom: -1px">Perishabl</h3>
+          <h3>HTML | CSS | Javascript</h3>
+          <div class="divider2"></div>
+          <h3
+            style="
+              width: 361px;
+              line-height: 28px;
+              font-weight: 100;
+              font-size: 20px;
+            "
+          >
+            Used the Vue.js CLI, Javascript, and various API calls, to create a
+            site where users can search for, and read more about different anime
+            shows
+          </h3>
+          <br />
+          <a href="https://animesfinder.netlify.app/" target="_blank"
+            ><mainbtn bgcolor="white" textcolor="black">Demo</mainbtn></a
+          >
+          <mainbtn bgcolor="white" textcolor="black" style="margin-left: 20px"
+            >Github</mainbtn
+          >
+        </div>
       </section>
-      <section class="project2"></section>
     </div>
   </section>
 </template>
 <script>
 import mainbtn from "../helpers/button.vue";
+import project from "./projects";
 export default {
   name: "Home",
-  components: { mainbtn },
+  components: { mainbtn, project },
   data() {
     return {};
   },
@@ -108,37 +142,26 @@ export default {
   },
 
   mounted() {
-    const main = document.querySelector(".navbar");
-    let observer3 = new IntersectionObserver(function (e) {
-      if (e[0].isIntersecting) {
-        that.changeIndicator("one");
-      }
-    }, options);
-
-    observer3.observe(main);
-
-    //----------
-
-    const aboutmesect = document.querySelector(".aboutme");
     let options = { threshold: 0.5 };
+    const main = document.querySelector(".navbar");
+    const projects = document.querySelector(".projects");
+    const aboutmesect = document.querySelector(".aboutme");
     const that = this;
+
     let observer = new IntersectionObserver(function (e) {
       if (e[0].isIntersecting) {
         that.changeIndicator("two");
       }
     }, options);
-
     observer.observe(aboutmesect);
-    document.querySelectorAll(".indicator").forEach((circle) => {
-      circle.addEventListener("click", function () {
-        console.log(circle.dataset.scrollto);
-      });
-    });
 
-    // --------
+    let observer3 = new IntersectionObserver(function (e) {
+      if (e[0].isIntersecting) {
+        that.changeIndicator("one");
+      }
+    }, options);
+    observer3.observe(main);
 
-    const projects = document.querySelector(".projects");
-    let options2 = { threshold: 0.5 };
     let observer2 = new IntersectionObserver(function (e) {
       if (e[0].isIntersecting) {
         that.changeIndicator("three");
@@ -147,9 +170,40 @@ export default {
       if (!e[0].isIntersecting) {
         that.changeIndicator("two");
       }
-    }, options2);
+    }, options);
 
     observer2.observe(projects);
+
+    document.querySelectorAll(".indicator").forEach((circle) => {
+      circle.addEventListener("click", function () {
+        console.log(circle.dataset.scrollto);
+      });
+    });
+    // NEXT PROJECT
+
+    document.querySelector(".nextarrow").addEventListener("click", function () {
+      document.querySelector(".bothprojects").style.transform =
+        "translateX(-122vw)";
+    });
+    document.querySelector(".backarrow").addEventListener("click", function () {
+      document.querySelector(".bothprojects").style.transform =
+        "translateX(0vw)";
+    });
+
+    const tldr = document.querySelector(".aboutme--right");
+    const aboutme = document.querySelector(".aboutme--left");
+    let observer4 = new IntersectionObserver(
+      function (e) {
+        if (e[0].isIntersecting) {
+          aboutme.classList.add("slide");
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    observer4.observe(tldr);
   },
 };
 </script>

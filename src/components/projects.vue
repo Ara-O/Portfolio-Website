@@ -1,0 +1,44 @@
+<template>
+  <div class="iframes">
+    <iframe
+      width="1135px"
+      height="750px"
+      :src="iframeurl"
+      style="transform: scale(0.55) translate(-195px, -80px)"
+    ></iframe>
+  </div>
+  <div class="projectdescr">
+    <img src="../assets/icons8-arrow-60.png" alt="" class="nextarrow" />
+    <h3 style="font-size: 33px; margin-bottom: -1px">
+      <slot name="projectname"></slot>
+    </h3>
+    <h3 style="letter-spacing: 0.7px">
+      <slot name="toolsused"></slot>
+    </h3>
+    <div class="divider2"></div>
+    <h3
+      style="width: 361px; line-height: 28px; font-weight: 100; font-size: 20px"
+    >
+      <slot name="description"></slot>
+    </h3>
+    <br />
+    <a :href="demourl" target="_blank"
+      ><mainbtn bgcolor="white" textcolor="black">Demo</mainbtn></a
+    >
+    <a :href="githuburl" target="_blank">
+      <mainbtn bgcolor="white" textcolor="black" style="margin-left: 20px"
+        >Github</mainbtn
+      ></a
+    >
+  </div>
+</template>
+
+<script>
+import mainbtn from "../helpers/button.vue";
+export default {
+  props: ["iframeurl", "demourl", "githuburl"],
+  components: {
+    mainbtn,
+  },
+};
+</script>

@@ -3,15 +3,15 @@
     <ul class="navbar">
       <span>
         <div class="red"></div>
-        <li tabindex="1">About Me</li>
+        <li tabindex="1" data-scrollto=".aboutme">About Me</li>
       </span>
       <span>
         <div class="red"></div>
-        <li tabindex="2">Skills</li>
+        <li tabindex="2" data-scrollto=".projects">Projects</li>
       </span>
       <span>
         <div class="red"></div>
-        <li tabindex="3">Contact Me</li>
+        <li tabindex="3" data-scrollto=".contact">Contact Me</li>
       </span>
     </ul>
   </nav>
@@ -29,6 +29,13 @@ export default {
       });
       list.addEventListener("mouseleave", function (e) {
         e.target.previousSibling.style.width = "23px";
+      });
+    });
+
+    document.querySelector(".navbar").addEventListener("click", function (e) {
+      console.log(document.querySelector("" + e.target.dataset.scrollto));
+      document.querySelector(e.target.dataset.scrollto).scrollIntoView({
+        behavior: "smooth",
       });
     });
   },

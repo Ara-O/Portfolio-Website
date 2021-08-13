@@ -1,13 +1,13 @@
 <template>
   <button class="mainbtn" :style="{ background: bgcolor, color: textcolor }">
-    {{ btntext }}
+    <slot></slot>
   </button>
 </template>
 
 <script>
 export default {
   name: "mainbtn",
-  props: ["bgcolor", "textcolor", "btntext"],
+  props: ["bgcolor", "textcolor"],
 };
 </script>
 

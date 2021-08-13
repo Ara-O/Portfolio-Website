@@ -96,6 +96,7 @@ h5.my--desc {
   background-color: rgb(160, 160, 160);
   width: 13px;
   border-radius: 20px;
+  cursor: pointer;
 }
 .one {
   background-color: $accentcolor;
@@ -116,13 +117,22 @@ h5.my--desc {
   justify-content: center;
   column-gap: 101px;
   width: 100%;
-  height: 100vh;
+  height: 88vh;
   background: linear-gradient(85deg, black 76%, $gradient2 123%);
 }
+
 .aboutme--left {
+  transition: all 500ms ease-in;
   display: grid;
+  opacity: 0;
   max-width: 411px;
+  transform: translateX(-492px);
   grid-template-rows: 31% 50% 20%;
+}
+
+.slide {
+  transform: translateX(0px);
+  opacity: 1;
 }
 .aboutmedesc {
   margin-top: -20px;
@@ -153,11 +163,12 @@ h5.my--desc {
   padding-left: 43px;
   padding-top: 28px;
   margin-left: 19px;
-  background: linear-gradient(278deg, white, #d4d4d4);
+  background: white;
   border-radius: 4px;
   height: 446px;
   color: black;
 }
+
 .tldr {
   font-size: 21px;
   font-weight: 100;
@@ -168,16 +179,60 @@ h5.my--desc {
   padding-left: 40px;
   background: linear-gradient(85deg, black 82%, #454545 123%);
   color: white;
+  overflow: hidden;
+  margin-top: -50px;
 }
 
-section.project2 {
+.projectdescr {
   width: 494px;
+  margin-left: -198px;
+  padding-top: 130px;
+  position: relative;
 }
 .project1 {
   width: auto;
+  display: flex;
 }
 
 .bothprojects {
   display: flex;
-  justify-content: center;
+  column-gap: 600px;
+  transition: all 1s ease-in-out;
+  column-gap: 450px;
+  // transform: translateX(-145vw);
+}
+
+.project2 h3 {
+  letter-spacing: 0.7px;
+}
+
+.divider2 {
+  height: 10px;
+  background: $accentcolor;
+  width: 146px;
+  border-radius: 30px;
+}
+
+@mixin arrowStyles {
+  position: absolute;
+  right: 62px;
+  cursor: pointer;
+  width: 29px;
+  top: 300px;
+}
+
+img.nextarrow {
+  @include arrowStyles;
+  transform: rotate(90deg);
+}
+
+img.backarrow {
+  @include arrowStyles;
+
+  transform: rotate(270deg);
+}
+
+section.project2 {
+  width: auto;
+  display: flex;
 }
