@@ -11,7 +11,7 @@
       </span>
       <span>
         <div class="red"></div>
-        <li tabindex="3" data-scrollto=".contact">Contact Me</li>
+        <li tabindex="3" data-scrollto=".contactme">Contact Me</li>
       </span>
     </ul>
   </nav>

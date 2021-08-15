@@ -217,19 +217,27 @@ h5.my--desc {
   position: absolute;
   right: 62px;
   cursor: pointer;
-  width: 29px;
+  width: 24px;
   top: 300px;
+  transition: transform 300ms linear;
 }
 
 img.nextarrow {
   @include arrowStyles;
   transform: rotate(90deg);
+
+  &:hover {
+    transform: rotate(90deg) scale(1.1);
+  }
 }
 
 img.backarrow {
   @include arrowStyles;
-
   transform: rotate(270deg);
+
+  &:hover {
+    transform: rotate(270deg) scale(1.1);
+  }
 }
 
 section.project2 {

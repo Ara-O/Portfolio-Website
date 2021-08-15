@@ -27,6 +27,7 @@
       ></div>
       <div tabindex="7" class="indicator two" data-scrollto="aboutme"></div>
       <div tabindex="8" class="indicator three" data-scrollto="aboutme"></div>
+      <div tabindex="9" class="indicator four" data-scrollto="contactme"></div>
     </div>
   </div>
   <section class="aboutme">
@@ -55,12 +56,12 @@
         textcolor="white"
         >Resume</mainbtn
       >
-      <mainbtn
+      <!-- <mainbtn
         bgcolor="linear-gradient(136deg, #790000, #da0000)"
         textcolor="white"
         style="margin-left: 20px"
         >View Contact Info</mainbtn
-      >
+      > -->
     </div>
   </section>
   <section class="projects">
@@ -89,7 +90,7 @@
           <iframe
             width="1135px"
             height="750px"
-            src="https://animesfinder.netlify.app/"
+            src="https://hungry-yonath-796229.netlify.app"
             style="transform: scale(0.55) translate(-195px, -80px)"
           ></iframe>
         </div>
@@ -111,23 +112,30 @@
             shows
           </h3>
           <br />
-          <a href="https://animesfinder.netlify.app/" target="_blank"
+
+          <a href="https://hungry-yonath-796229.netlify.app" target="_blank"
             ><mainbtn bgcolor="white" textcolor="black">Demo</mainbtn></a
           >
-          <mainbtn bgcolor="white" textcolor="black" style="margin-left: 20px"
-            >Github</mainbtn
+          <a href="https://github.com/Ara-O/Perishabl" target="_blank">
+            <mainbtn bgcolor="white" textcolor="black" style="margin-left: 20px"
+              >Github</mainbtn
+            ></a
           >
         </div>
       </section>
     </div>
   </section>
+  <section class="contactsection">
+    <contactpage></contactpage>
+  </section>
 </template>
 <script>
 import mainbtn from "../helpers/button.vue";
+import contactpage from "./contactspage";
 import project from "./projects";
 export default {
   name: "Home",
-  components: { mainbtn, project },
+  components: { mainbtn, project, contactpage },
   data() {
     return {};
   },
@@ -146,6 +154,7 @@ export default {
     const main = document.querySelector(".navbar");
     const projects = document.querySelector(".projects");
     const aboutmesect = document.querySelector(".aboutme");
+    const contactme = document.querySelector(".contactme");
     const that = this;
 
     let observer = new IntersectionObserver(function (e) {
@@ -166,13 +175,17 @@ export default {
       if (e[0].isIntersecting) {
         that.changeIndicator("three");
       }
-
-      if (!e[0].isIntersecting) {
-        that.changeIndicator("two");
-      }
     }, options);
 
     observer2.observe(projects);
+
+    let observer5 = new IntersectionObserver(function (e) {
+      if (e[0].isIntersecting) {
+        that.changeIndicator("four");
+      }
+    }, options);
+
+    observer5.observe(contactme);
 
     document.querySelectorAll(".indicator").forEach((circle) => {
       circle.addEventListener("click", function () {
