@@ -1,5 +1,5 @@
 <template>
-  <main class="contactme">
+  <main class="contactme" id="contactme">
     <section class="form-section">
       <h3 class="contactme">Contact Me</h3>
       <form>
@@ -19,7 +19,9 @@
         />
       </form>
       <br />
-      <mainbtn bgcolor="red" textcolor="white">Send Message</mainbtn>
+      <mainbtn bgcolor="red" textcolor="white" class="sendemail"
+        >Send Message</mainbtn
+      >
     </section>
     <section class="businesscard">
       <h3 style="font-size: 38px; letter-spacing: 0.7px">Eyiara Oladipo</h3>
@@ -88,6 +90,7 @@ main {
   font-size: 19px;
   height: 156px;
   margin-top: 17px;
+  letter-spacing: 0.7px;
 }
 
 .businesscard {
@@ -130,13 +133,33 @@ main {
 .businesscard h3 a:hover {
   text-decoration: underline;
 }
+@media (max-width: 1250px) {
+  .contactme {
+    display: none;
+  }
+}
 </style>
 
 <script>
 import mainbtn from "../helpers/button.vue";
+import emailjs from "emailjs-com";
 export default {
   components: {
     mainbtn,
+  },
+
+  mounted() {
+    emailjs.init("user_wE7Et0B04Z2GFOvM9I8vS");
+
+    document.querySelector(".sendemail").addEventListener("click", function () {
+      const organization = document.querySelector("#organization").value;
+      const message = document.querySelector("#message").value;
+      emailjs.send("service_w07j94a", "template_o0zl6j9", {
+        from_name: organization,
+        to_name: "Ara",
+        message: message,
+      });
+    });
   },
 };
 </script>

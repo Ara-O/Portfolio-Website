@@ -244,3 +244,82 @@ section.project2 {
   width: auto;
   display: flex;
 }
+
+@media (max-width: 1250px) {
+  .blend {
+    display: none;
+  }
+
+  .hero--header {
+    width: 100%;
+    height: 79vh;
+    justify-content: normal;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, black 49%, #454545 154%);
+    justify-content: center;
+  }
+
+  .arrange {
+    margin-left: 0px;
+  }
+
+  .aboutme--right {
+    // width: 319px;
+    // padding: 28px 43px;
+    // margin: 0px 21px;
+    // /* margin-left: 19px; */
+    // background: white;
+    // border-radius: 4px;
+    // height: 446px;
+    // color: black;
+  }
+
+  .aboutme {
+    // display: block;
+    // height: 146vh;
+    background: linear-gradient(90deg, black 49%, #454545 154%);
+  }
+
+  .divider-div {
+    display: none;
+  }
+
+  // .aboutme--left {
+  //   display: none;
+  // }
+
+  // .aboutme--phone {
+  //   color: white;
+  //   display: block !important;
+  //   margin-left: 20px;
+  // }
+}
+
+@media (max-width: 1130px) {
+  .aboutme--left {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .indicator {
+    display: none;
+  }
+
+  .name {
+    font-size: 65px;
+  }
+
+  .name::after {
+    margin-top: 17.5px;
+    margin-left: -53px;
+  }
+
+  .aboutme--right {
+    margin-left: 0px;
+    padding-right: 20px;
+    width: 75%;
+    max-width: 351px;
+  }
+}

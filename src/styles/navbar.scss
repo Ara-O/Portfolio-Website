@@ -41,3 +41,20 @@ ul {
   top: -10px;
   transition: all 400ms ease-in;
 }
+
+@media (max-width: 1250px) {
+  .navbar {
+    color: white;
+    position: absolute;
+    width: 100vw;
+    top: 27px;
+    right: 0px;
+    display: flex;
+    z-index: 4;
+    justify-content: center;
+  }
+
+  #nav li {
+    margin-right: 62px;
+  }
+}

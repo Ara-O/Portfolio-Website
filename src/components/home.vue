@@ -14,8 +14,12 @@
           Freshman at the University of Detroit Mercy studying Computer Science
         </h5>
         <div class="CTAS">
-          <mainbtn bgcolor="#DA0000" textcolor="white">My Works</mainbtn>
-          <mainbtn bgcolor="#white" textcolor="black">Contact Me</mainbtn>
+          <a href="#projects">
+            <mainbtn bgcolor="#DA0000" textcolor="white">My Works</mainbtn></a
+          >
+          <a href="#contactme"
+            ><mainbtn bgcolor="#white" textcolor="black">Contact Me</mainbtn></a
+          >
         </div>
       </div>
     </div>
@@ -26,10 +30,11 @@
         data-scrollto="hero--header"
       ></div>
       <div tabindex="7" class="indicator two" data-scrollto="aboutme"></div>
-      <div tabindex="8" class="indicator three" data-scrollto="aboutme"></div>
+      <div tabindex="8" class="indicator three" data-scrollto="projects"></div>
       <div tabindex="9" class="indicator four" data-scrollto="contactme"></div>
     </div>
   </div>
+
   <section class="aboutme">
     <div class="aboutme--left">
       <h2 class="aboutmetext">About Me</h2>
@@ -64,7 +69,7 @@
       > -->
     </div>
   </section>
-  <section class="projects">
+  <section class="projects" id="projects">
     <h2 style="font-size: 50px; text-align: center; margin-bottom: -8px">
       Projects
     </h2>
@@ -156,7 +161,7 @@ export default {
     const aboutmesect = document.querySelector(".aboutme");
     const contactme = document.querySelector(".contactme");
     const that = this;
-
+    // Code could be better
     let observer = new IntersectionObserver(function (e) {
       if (e[0].isIntersecting) {
         that.changeIndicator("two");
@@ -190,6 +195,9 @@ export default {
     document.querySelectorAll(".indicator").forEach((circle) => {
       circle.addEventListener("click", function () {
         console.log(circle.dataset.scrollto);
+        document.querySelector("." + circle.dataset.scrollto).scrollIntoView({
+          behavior: "smooth",
+        });
       });
     });
     // NEXT PROJECT
