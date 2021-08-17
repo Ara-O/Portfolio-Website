@@ -19,6 +19,7 @@ export default {
   width: auto;
   font-family: "Agency FB";
   padding: 0px 25px;
+  letter-spacing: 0.7px;
   cursor: pointer;
   transition: all 1s ease-in-out;
 }

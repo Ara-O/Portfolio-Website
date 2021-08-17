@@ -117,8 +117,9 @@ h5.my--desc {
   justify-content: center;
   column-gap: 101px;
   width: 100%;
-  height: 88vh;
-  background: linear-gradient(85deg, black 76%, $gradient2 123%);
+  max-height: 742px;
+  padding-bottom: 50px;
+  background: linear-gradient(85deg, black 72%, #454545 129%);
 }
 
 .aboutme--left {
@@ -127,7 +128,7 @@ h5.my--desc {
   opacity: 0;
   max-width: 411px;
   transform: translateX(-492px);
-  grid-template-rows: 31% 50% 20%;
+  grid-template-rows: 43%;
 }
 
 .slide {
@@ -175,12 +176,11 @@ h5.my--desc {
   letter-spacing: 0.7px;
 }
 .projects {
-  height: 100vh;
+  max-height: 685px;
   padding-left: 40px;
-  background: linear-gradient(85deg, black 82%, #454545 123%);
+  background: linear-gradient(85deg, black 72%, #454545 138%);
   color: white;
   overflow: hidden;
-  margin-top: -50px;
 }
 
 .projectdescr {
@@ -245,6 +245,32 @@ section.project2 {
   display: flex;
 }
 
+.overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.171);
+  z-index: 500;
+  top: 0px;
+  display: block;
+}
+
+@media (max-width: 1460px) {
+  img.nextarrow {
+    right: 254px;
+    cursor: pointer;
+    width: 24px;
+    top: 422px;
+  }
+
+  img.backarrow {
+    right: 254px;
+    cursor: pointer;
+    width: 24px;
+    top: 422px;
+  }
+}
+
 @media (max-width: 1250px) {
   .blend {
     display: none;
@@ -264,17 +290,6 @@ section.project2 {
     margin-left: 0px;
   }
 
-  .aboutme--right {
-    // width: 319px;
-    // padding: 28px 43px;
-    // margin: 0px 21px;
-    // /* margin-left: 19px; */
-    // background: white;
-    // border-radius: 4px;
-    // height: 446px;
-    // color: black;
-  }
-
   .aboutme {
     // display: block;
     // height: 146vh;
@@ -284,16 +299,6 @@ section.project2 {
   .divider-div {
     display: none;
   }
-
-  // .aboutme--left {
-  //   display: none;
-  // }
-
-  // .aboutme--phone {
-  //   color: white;
-  //   display: block !important;
-  //   margin-left: 20px;
-  // }
 }
 
 @media (max-width: 1130px) {

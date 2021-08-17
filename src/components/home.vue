@@ -14,11 +14,18 @@
           Freshman at the University of Detroit Mercy studying Computer Science
         </h5>
         <div class="CTAS">
-          <a href="#projects">
-            <mainbtn bgcolor="#DA0000" textcolor="white">My Works</mainbtn></a
+          <mainbtn
+            bgcolor="#DA0000"
+            textcolor="white"
+            @click="scrollDown('projects')"
+            >My Works</mainbtn
           >
-          <a href="#contactme"
-            ><mainbtn bgcolor="#white" textcolor="black">Contact Me</mainbtn></a
+
+          <mainbtn
+            bgcolor="#white"
+            textcolor="black"
+            @click="scrollDown(contactme)"
+            >Contact Me</mainbtn
           >
         </div>
       </div>
@@ -36,38 +43,7 @@
   </div>
 
   <section class="aboutme">
-    <div class="aboutme--left">
-      <h2 class="aboutmetext">About Me</h2>
-      <h4 class="aboutmedesc">
-        I am a freshman studying Computer Science at the University of Detroit
-        Mercy. I am passionate about Front-end development and UX/UI design. I
-        have worked as a teaching assistant and have software development
-        experience through various internships I have had with JOURNi,
-        Accenture, Google, and the Kapor Center.I have experience with HTML, CSS
-        ( and a little bit of SASS ), Javascript and Vue.js. Along with
-        experience in firebase and squarespace
-      </h4>
-    </div>
-    <div class="divider-div"><div class="divider"></div></div>
-    <div class="aboutme--right">
-      <h2 style="font-size: 39px">TL;DR</h2>
-      <h4 class="tldr">Name: Eyiara "Ara" Oladipo</h4>
-      <h4 class="tldr">Age: 16 years old</h4>
-      <h4 class="tldr">Skills: HTML | CSS | JS | Vue.js | Firebase</h4>
-      <h4 class="tldr">Interests: UX/UI design, Front End development</h4>
-      <br />
-      <mainbtn
-        bgcolor="linear-gradient(126deg, black, rgb(102 102 102))"
-        textcolor="white"
-        >Resume</mainbtn
-      >
-      <!-- <mainbtn
-        bgcolor="linear-gradient(136deg, #790000, #da0000)"
-        textcolor="white"
-        style="margin-left: 20px"
-        >View Contact Info</mainbtn
-      > -->
-    </div>
+    <aboutme></aboutme>
   </section>
   <section class="projects" id="projects">
     <h2 style="font-size: 50px; text-align: center; margin-bottom: -8px">
@@ -90,13 +66,14 @@
         </project>
       </section>
       <!-- Second project -->
-      <section class="project2">
+      <section class="project2" style="display: none">
         <div class="iframes">
           <iframe
             width="1135px"
             height="750px"
             src="https://hungry-yonath-796229.netlify.app"
             style="transform: scale(0.55) translate(-195px, -80px)"
+            frameborder="0"
           ></iframe>
         </div>
         <div class="projectdescr">
@@ -138,9 +115,12 @@
 import mainbtn from "../helpers/button.vue";
 import contactpage from "./contactspage";
 import project from "./projects";
+import aboutme from "./aboutme";
+import arrowClickHandle from "../modules/handleArrowClick";
+import indicatorHandle from "../modules/handleIndicators";
 export default {
   name: "Home",
-  components: { mainbtn, project, contactpage },
+  components: { mainbtn, project, contactpage, aboutme },
   data() {
     return {};
   },
@@ -152,65 +132,17 @@ export default {
       });
       document.querySelector("." + current).style.background = "#da0000";
     },
+
+    scrollDown(section) {
+      document.querySelector("#" + section).scrollIntoView({
+        behavior: "smooth",
+      });
+    },
   },
 
   mounted() {
-    let options = { threshold: 0.5 };
-    const main = document.querySelector(".navbar");
-    const projects = document.querySelector(".projects");
-    const aboutmesect = document.querySelector(".aboutme");
-    const contactme = document.querySelector(".contactme");
-    const that = this;
-    // Code could be better
-    let observer = new IntersectionObserver(function (e) {
-      if (e[0].isIntersecting) {
-        that.changeIndicator("two");
-      }
-    }, options);
-    observer.observe(aboutmesect);
-
-    let observer3 = new IntersectionObserver(function (e) {
-      if (e[0].isIntersecting) {
-        that.changeIndicator("one");
-      }
-    }, options);
-    observer3.observe(main);
-
-    let observer2 = new IntersectionObserver(function (e) {
-      if (e[0].isIntersecting) {
-        that.changeIndicator("three");
-      }
-    }, options);
-
-    observer2.observe(projects);
-
-    let observer5 = new IntersectionObserver(function (e) {
-      if (e[0].isIntersecting) {
-        that.changeIndicator("four");
-      }
-    }, options);
-
-    observer5.observe(contactme);
-
-    document.querySelectorAll(".indicator").forEach((circle) => {
-      circle.addEventListener("click", function () {
-        console.log(circle.dataset.scrollto);
-        document.querySelector("." + circle.dataset.scrollto).scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    });
-    // NEXT PROJECT
-
-    document.querySelector(".nextarrow").addEventListener("click", function () {
-      document.querySelector(".bothprojects").style.transform =
-        "translateX(-122vw)";
-    });
-    document.querySelector(".backarrow").addEventListener("click", function () {
-      document.querySelector(".bothprojects").style.transform =
-        "translateX(0vw)";
-    });
-
+    arrowClickHandle();
+    indicatorHandle.call(this);
     const tldr = document.querySelector(".aboutme--right");
     const aboutme = document.querySelector(".aboutme--left");
     let observer4 = new IntersectionObserver(

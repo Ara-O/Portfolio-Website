@@ -6,6 +6,7 @@
       :src="iframeurl"
       style="transform: scale(0.55) translate(-195px, -80px)"
       tabindex="-1"
+      frameborder="0"
     ></iframe>
   </div>
   <div class="projectdescr">

@@ -51,7 +51,7 @@
 <style lang="scss" scoped>
 main {
   height: 100vh;
-  background: linear-gradient(85deg, black 88%, #454545 123%);
+  background: linear-gradient(85deg, black 80%, #454545 132%);
   color: white;
   display: flex;
   padding-top: 90px;
