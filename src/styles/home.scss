@@ -101,15 +101,31 @@ h5.my--desc {
 .one {
   background-color: $accentcolor;
 }
-.name::after {
+// .name::after {
+//   content: "";
+//   position: absolute;
+//   width: 6.5px;
+//   margin-top: 18.5px;
+//   margin-left: -57.2px;
+//   height: 8px;
+//   background: $accentcolor;
+// }
+
+.letteri {
+  position: relative;
+}
+
+span.letteri::before {
+  right: 0px;
   content: "";
   position: absolute;
   width: 6.5px;
-  margin-top: 18.5px;
-  margin-left: -57.2px;
   height: 8px;
-  background: $accentcolor;
+  background: #da0000;
+  top: 14.4px;
+  z-index: 3;
 }
+
 .aboutme {
   display: flex;
   color: white;

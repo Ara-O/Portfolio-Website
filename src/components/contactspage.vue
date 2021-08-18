@@ -61,6 +61,8 @@ main {
 .contactme {
   margin-top: 0px;
   font-size: 45px;
+  height: auto;
+  padding-bottom: 62px;
 }
 
 .form-section {
