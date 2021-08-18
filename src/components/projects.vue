@@ -1,5 +1,10 @@
 <template>
   <div class="iframes">
+    <img
+      src="../assets/example2.png"
+      alt="Project 1 Anime finder example"
+      class="project1image"
+    />
     <iframe
       width="1135px"
       height="750px"
@@ -14,12 +19,13 @@
     <h3 style="font-size: 33px; margin-bottom: -1px">
       <slot name="projectname"></slot>
     </h3>
-    <h3 style="letter-spacing: 0.7px">
+    <h3 style="letter-spacing: 0.7px" class="languagesused">
       <slot name="toolsused"></slot>
     </h3>
     <div class="divider2"></div>
     <h3
       style="width: 361px; line-height: 28px; font-weight: 100; font-size: 20px"
+      class="projectdesc"
     >
       <slot name="description"></slot>
     </h3>

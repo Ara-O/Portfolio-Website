@@ -68,6 +68,11 @@
       <!-- Second project -->
       <section class="project2" style="display: none">
         <div class="iframes">
+          <img
+            src="../assets/perishabl.png"
+            alt="Project 2 Perishabl example"
+            class="project1image project2image"
+          />
           <iframe
             width="1135px"
             height="750px"
@@ -79,9 +84,10 @@
         <div class="projectdescr">
           <img src="../assets/icons8-arrow-60.png" alt="" class="backarrow" />
           <h3 style="font-size: 33px; margin-bottom: -1px">Perishabl</h3>
-          <h3>HTML | CSS | Javascript</h3>
+          <h3 class="languagesused">HTML | CSS | Javascript</h3>
           <div class="divider2"></div>
           <h3
+            class="projectdesc"
             style="
               width: 361px;
               line-height: 28px;

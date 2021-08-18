@@ -54,7 +54,7 @@ main {
   background: linear-gradient(85deg, black 80%, #454545 132%);
   color: white;
   display: flex;
-  padding-top: 90px;
+  // padding-top: 90px;
   column-gap: 250px;
 }
 
@@ -133,9 +133,29 @@ main {
 .businesscard h3 a:hover {
   text-decoration: underline;
 }
-@media (max-width: 1250px) {
-  .contactme {
+@media (max-width: 1412px) {
+  .businesscard {
     display: none;
+  }
+
+  main {
+    padding-top: 0px;
+  }
+
+  .contactme {
+    justify-content: center;
+    padding-top: -88px;
+  }
+
+  .form-section {
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1400px) {
+  .contactme {
+    padding-top: 60px;
   }
 }
 </style>
