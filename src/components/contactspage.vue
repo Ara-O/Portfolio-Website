@@ -62,11 +62,11 @@ main {
   margin-top: 0px;
   font-size: 45px;
   height: auto;
-  padding-bottom: 62px;
 }
 
 .form-section {
   margin-left: 194px;
+  padding-bottom: 62px;
 }
 
 .label {
