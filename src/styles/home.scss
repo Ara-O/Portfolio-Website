@@ -111,20 +111,20 @@ h5.my--desc {
 //   background: $accentcolor;
 // }
 
-.letteri {
-  position: relative;
-}
+// .letteri {
+//   position: relative;
+// }
 
-span.letteri::before {
-  right: 0px;
-  content: "";
-  position: absolute;
-  width: 6.5px;
-  height: 8px;
-  background: #da0000;
-  top: 14.4px;
-  z-index: 3;
-}
+// span.letteri::before {
+//   left: 2px;
+//   content: "";
+//   position: absolute;
+//   width: 6.2px;
+//   height: 8px;
+//   background: #da0000;
+//   top: 16.4px;
+//   z-index: 3;
+// }
 
 .aboutme {
   display: flex;
