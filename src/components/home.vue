@@ -24,7 +24,7 @@
           <mainbtn
             bgcolor="#white"
             textcolor="black"
-            @click="scrollDown(contactme)"
+            @click="scrollDown('contactme')"
             >Contact Me</mainbtn
           >
         </div>

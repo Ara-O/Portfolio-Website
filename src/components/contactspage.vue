@@ -1,7 +1,7 @@
 <template>
   <main class="contactme" id="contactme">
     <section class="form-section">
-      <h3 class="contactme">Contact Me</h3>
+      <h3 class="contactmetext">Contact Me</h3>
       <form>
         <label for="organization" class="label">Name/Organization</label>
         <input
@@ -56,12 +56,12 @@ main {
   display: flex;
   // padding-top: 90px;
   column-gap: 250px;
+  height: auto;
 }
 
-.contactme {
+.contactmetext {
   margin-top: 0px;
   font-size: 45px;
-  height: auto;
 }
 
 .form-section {
@@ -135,6 +135,7 @@ main {
 .businesscard h3 a:hover {
   text-decoration: underline;
 }
+
 @media (max-width: 1412px) {
   .businesscard {
     display: none;
@@ -157,7 +158,17 @@ main {
 
 @media (max-width: 1400px) {
   .contactme {
-    padding-top: 60px;
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 1250px) {
+  main {
+    background: linear-gradient(90deg, #000 49%, #454545 167%);
+  }
+
+  #message {
+    width: 288px;
   }
 }
 </style>
