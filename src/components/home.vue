@@ -1,7 +1,12 @@
 <template>
   <div style="display: block">
     <div class="blend">
-      <img src="../assets/background.jpg" class="bg-img" />
+      <iframe
+        src="https://my.spline.design/untitled-29e7a58720caad55df89ef34c1581bbb/"
+        frameborder="0"
+        width="100%"
+        height="100%"
+      ></iframe>
     </div>
     <div class="hero--header">
       <div class="arrange">
