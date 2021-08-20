@@ -164,7 +164,7 @@ main {
 
 @media (max-width: 1250px) {
   main {
-    background: linear-gradient(90deg, #000 49%, #454545 167%);
+    background: linear-gradient(90deg, #000 60%, #454545 167%);
   }
 
   #message {

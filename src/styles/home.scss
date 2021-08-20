@@ -317,10 +317,6 @@ section.project2 {
     width: 400px;
   }
 
-  iframe {
-    display: none;
-  }
-
   .projects {
     padding-left: 16%;
     background: linear-gradient(85deg, black 71%, #454545 141%);
@@ -355,6 +351,10 @@ section.project2 {
 }
 
 @media (max-width: 1250px) {
+  iframe {
+    display: none;
+  }
+
   .blend {
     display: none;
   }
@@ -444,6 +444,13 @@ section.project2 {
     margin-left: 0px;
     padding-right: 20px;
     width: 75%;
-    max-width: 351px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .projects {
+    padding: 0px 34px;
   }
 }
