@@ -57,6 +57,7 @@ main {
   // padding-top: 90px;
   column-gap: 250px;
   height: auto;
+  // justify-content: center;
 }
 
 .contactmetext {
@@ -134,6 +135,12 @@ main {
 
 .businesscard h3 a:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 1921px) {
+  main {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 1412px) {

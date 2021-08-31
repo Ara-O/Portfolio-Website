@@ -54,6 +54,65 @@
     <h2 style="font-size: 50px; text-align: center; margin-bottom: -8px">
       Projects
     </h2>
+
+    <!-- MAIN CAROUSEL -->
+
+    <Carousel>
+      <Slide v-for="slide in projects" :key="slide">
+        <div class="carousel__item">
+          <section class="carouselproject">
+            <div class="iframes">
+              <iframe
+                width="1135px"
+                height="750px"
+                :src="slide.iframe"
+                style="transform: scale(0.55) translate(-195px, -80px)"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <div class="carouseldesc">
+              <h3 style="font-size: 33px; margin-bottom: -1px">
+                {{ slide.projectname }}
+              </h3>
+              <h3 class="languagesused">{{ slide.tools }}</h3>
+              <div class="divider2"></div>
+              <h3
+                class="projectdesc"
+                style="
+                  width: 361px;
+                  line-height: 28px;
+                  font-weight: 100;
+                  font-size: 20px;
+                  text-align: left;
+                "
+              >
+                {{ slide.desc }}
+              </h3>
+              <br />
+              <div>
+                <a :href="slide.demo" target="_blank"
+                  ><mainbtn bgcolor="white" textcolor="black">Demo</mainbtn></a
+                >
+                <a :href="slide.github" target="_blank">
+                  <mainbtn
+                    bgcolor="white"
+                    textcolor="black"
+                    style="margin-left: 20px"
+                    >Github</mainbtn
+                  ></a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </Slide>
+      <template #addons>
+        <Pagination />
+      </template>
+    </Carousel>
+
+    <!-- FOR SMALLER DISPLAYS -->
+
     <div class="bothprojects">
       <section class="project1">
         <project
@@ -72,49 +131,19 @@
       </section>
       <!-- Second project -->
       <section class="project2" style="display: none">
-        <div class="iframes">
-          <img
-            src="../assets/perishabl.png"
-            alt="Project 2 Perishabl example"
-            class="project1image project2image"
-          />
-          <iframe
-            width="1135px"
-            height="750px"
-            src="https://hungry-yonath-796229.netlify.app"
-            style="transform: scale(0.55) translate(-195px, -80px)"
-            frameborder="0"
-          ></iframe>
-        </div>
-        <div class="projectdescr">
-          <img src="../assets/icons8-arrow-60.png" alt="" class="backarrow" />
-          <h3 style="font-size: 33px; margin-bottom: -1px">Perishabl</h3>
-          <h3 class="languagesused">HTML | CSS | Javascript</h3>
-          <div class="divider2"></div>
-          <h3
-            class="projectdesc"
-            style="
-              width: 361px;
-              line-height: 28px;
-              font-weight: 100;
-              font-size: 20px;
-            "
-          >
-            Used the Vue.js CLI, Javascript, and various API calls, to create a
-            site where users can search for, and read more about different anime
-            shows
-          </h3>
-          <br />
-
-          <a href="https://hungry-yonath-796229.netlify.app" target="_blank"
-            ><mainbtn bgcolor="white" textcolor="black">Demo</mainbtn></a
-          >
-          <a href="https://github.com/Ara-O/Perishabl" target="_blank">
-            <mainbtn bgcolor="white" textcolor="black" style="margin-left: 20px"
-              >Github</mainbtn
-            ></a
-          >
-        </div>
+        <project
+          githuburl="https://github.com/Ara-O/Perishabl"
+          demourl="https://hungry-yonath-796229.netlify.app"
+          iframeurl="https://hungry-yonath-796229.netlify.app"
+        >
+          <template #projectname>Perishabl</template>
+          <template #toolsused>HTML | CSS | Javascript</template>
+          <template #description>
+            Simulated the landing page of a service designed to reduce food
+            waste by alerting users whenever their grocery items are about to
+            expire
+          </template>
+        </project>
       </section>
     </div>
   </section>
@@ -127,13 +156,43 @@ import mainbtn from "../helpers/button.vue";
 import contactpage from "./contactspage";
 import project from "./projects";
 import aboutme from "./aboutme";
-import arrowClickHandle from "../modules/handleArrowClick";
+// import arrowClickHandle from "../modules/handleArrowClick";
 import indicatorHandle from "../modules/handleIndicators";
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination } from "vue3-carousel";
+
 export default {
   name: "Home",
-  components: { mainbtn, project, contactpage, aboutme },
+  components: {
+    mainbtn,
+    project,
+    contactpage,
+    aboutme,
+    Carousel,
+    Slide,
+    Pagination,
+  },
   data() {
-    return {};
+    return {
+      projects: [
+        {
+          iframe: "https://animesfinder.netlify.app/",
+          projectname: "Anime Finder",
+          tools: "HTML | CSS | Javascript | Vue.js",
+          desc: "Used the Vue.js CLI, Javascript, and various API calls, to create a site where users can search for, and read more aboutdifferent anime shows",
+          demo: "https://animesfinder.netlify.app",
+          github: "https://github.com/Ara-O/Anime_Finder",
+        },
+        {
+          iframe: "https://hungry-yonath-796229.netlify.app",
+          projectname: "Perishabl",
+          tools: "HTML | CSS | Javascript",
+          desc: "Simulated the landing page of a service designed to reduce food waste  by alerting users whenever their grocery items are about to expire ",
+          demo: "https://hungry-yonath-796229.netlify.app",
+          github: "https://github.com/Ara-O/Perishabl",
+        },
+      ],
+    };
   },
 
   methods: {
@@ -152,7 +211,7 @@ export default {
   },
 
   mounted() {
-    arrowClickHandle();
+    // arrowClickHandle();
     indicatorHandle.call(this);
     const tldr = document.querySelector(".aboutme--right");
     const aboutme = document.querySelector(".aboutme--left");
