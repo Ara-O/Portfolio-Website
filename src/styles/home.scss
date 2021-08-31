@@ -90,6 +90,7 @@ h5.my--desc {
   align-items: center;
   row-gap: 10px;
   position: fixed;
+  z-index: 500;
 }
 .indicator {
   height: 13px;
@@ -192,7 +193,7 @@ h5.my--desc {
   letter-spacing: 0.7px;
 }
 .projects {
-  padding-left: 40px;
+  // padding-left: 40px;
   background: linear-gradient(85deg, black 72%, #454545 138%);
   color: white;
   overflow: hidden;
@@ -204,13 +205,14 @@ h5.my--desc {
   padding-top: 130px;
   position: relative;
 }
+
 .project1 {
   width: auto;
   display: flex;
 }
 
 .bothprojects {
-  display: flex;
+  display: none;
   column-gap: 600px;
   transition: all 1s ease-in-out;
   // column-gap: 450px;
@@ -281,23 +283,15 @@ section.project2 {
   }
 }
 
-@media (max-width: 1460px) {
-  img.nextarrow {
-    right: 254px;
-    cursor: pointer;
-    width: 24px;
-    top: 422px;
-  }
-
-  img.backarrow {
-    right: 254px;
-    cursor: pointer;
-    width: 24px;
-    top: 422px;
-  }
-}
-
 @media (max-width: 1400px) {
+  .bothprojects {
+    display: flex;
+  }
+
+  .carousel {
+    display: none;
+  }
+
   .nextarrow,
   .backarrow,
   .indicator {
@@ -318,7 +312,7 @@ section.project2 {
   }
 
   .projects {
-    padding-left: 16%;
+    padding-left: 0%;
     background: linear-gradient(85deg, black 71%, #454545 141%);
     color: white;
     overflow: hidden;
@@ -332,6 +326,7 @@ section.project2 {
 
   .bothprojects {
     display: block !important;
+    padding-left: 16%;
   }
 
   .project2 {
@@ -340,6 +335,10 @@ section.project2 {
     justify-content: flex-end;
     margin-top: 40px;
     align-items: center;
+  }
+
+  .iframes iframe {
+    display: none;
   }
 }
 
@@ -405,6 +404,7 @@ section.project2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 0px;
   }
 
   .project1,
@@ -453,4 +453,69 @@ section.project2 {
   .projects {
     padding: 0px 34px;
   }
+}
+
+.carousel__item {
+  min-height: 200px;
+  width: 95%;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__slide {
+  padding: 10px;
+}
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+  border: 5px solid white;
+}
+
+.carouselproject {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.carouseldesc {
+  width: 508px;
+  margin-left: -254px;
+  padding-top: 130px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.carousel__pagination-button {
+  margin: 8px;
+  width: 43px;
+  height: 9px;
+  border: 0;
+  cursor: pointer;
+  background-color: #ff7373;
+}
+
+.carousel__pagination {
+  margin-bottom: 109px;
+  margin-top: -160px;
+}
+
+.carousel * {
+  box-sizing: border-box;
+  z-index: 40 !important;
+}
+
+.carousel__pagination-button--active {
+  background-color: $accentcolor;
+}
+
+section.carouselproject {
+  margin-top: -50px;
 }
