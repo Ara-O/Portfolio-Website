@@ -114,13 +114,15 @@
     <!-- FOR SMALLER DISPLAYS -->
 
     <div class="bothprojects">
-      <section class="project1">
+      <!-- First project -->
+      <section class="project1" >
         <project
           githuburl="https://github.com/Ara-O/Anime_Finder"
           demourl="https://animesfinder.netlify.app/"
           iframeurl="https://animesfinder.netlify.app/"
+          previewurl="project1-preview.png"
         >
-          <template #projectname>Anime Finder</template>
+          <template #projectname >Anime Finder</template>
           <template #toolsused>HTML | CSS | Javascript | Vue.js</template>
           <template #description>
             Used the Vue.js CLI, Javascript, and various API calls, to create a
@@ -129,12 +131,28 @@
           >
         </project>
       </section>
-      <!-- Second project -->
+        <!-- Second project -->
       <section class="project2" style="display: none">
+        <project
+          githuburl="https://github.com/Ara-O/Windows10-mock"
+          demourl="https://windows10clone.netlify.app"
+          iframeurl="https://windows10clone.netlify.app"
+          previewurl="project2-preview.png"
+        >
+          <template #projectname>Windows 10 Clone</template>
+          <template #toolsused>HTML | CSS | Javascript | Vue.js</template>
+          <template #description>
+            A clone of how Windows 10 looks like. From the lock screen and password page, to the home screen with moveable icons.
+          </template>
+        </project>
+      </section>
+      <!-- Third project -->
+      <section class="project1">
         <project
           githuburl="https://github.com/Ara-O/Perishabl"
           demourl="https://hungry-yonath-796229.netlify.app"
           iframeurl="https://hungry-yonath-796229.netlify.app"
+          previewurl="project3-preview.png"
         >
           <template #projectname>Perishabl</template>
           <template #toolsused>HTML | CSS | Javascript</template>
@@ -145,6 +163,7 @@
           </template>
         </project>
       </section>
+    
     </div>
   </section>
   <section class="contactsection">
@@ -183,6 +202,14 @@ export default {
           demo: "https://animesfinder.netlify.app",
           github: "https://github.com/Ara-O/Anime_Finder",
         },
+         {
+          iframe: "https://windows10clone.netlify.app",
+          projectname: "Windows 10 Clone",
+          tools: "HTML | CSS | Javascript | Vue.js",
+          desc: " A clone of how Windows 10 looks like. From the lock screen and password page, to the home screen with moveable icons.",
+          demo: "https://windows10clone.netlify.app",
+          github: "https://windows10clone.netlify.app",
+        },
         {
           iframe: "https://hungry-yonath-796229.netlify.app",
           projectname: "Perishabl",
@@ -190,7 +217,8 @@ export default {
           desc: "Simulated the landing page of a service designed to reduce food waste  by alerting users whenever their grocery items are about to expire ",
           demo: "https://hungry-yonath-796229.netlify.app",
           github: "https://github.com/Ara-O/Perishabl",
-        },
+        }
+       
       ],
     };
   },
@@ -231,3 +259,8 @@ export default {
 };
 </script>
 <style src="../styles/home.scss" lang="scss"></style>
+<style scoped>
+.notificationposition{
+    right: 235px;
+}
+</style>

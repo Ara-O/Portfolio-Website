@@ -1,7 +1,7 @@
 <template>
   <div class="iframes">
     <img
-      src="../assets/example2.png"
+      :src="showPreview(`${previewurl}`)"
       alt="Project 1 Anime finder example"
       class="project1image"
     />
@@ -16,7 +16,7 @@
   </div>
   <div class="projectdescr">
     <img src="../assets/icons8-arrow-60.png" alt="" class="nextarrow" />
-    <h3 style="font-size: 33px; margin-bottom: -1px">
+    <h3 style="font-size: 33px; margin-bottom: -1px;">
       <slot name="projectname"></slot>
     </h3>
     <h3 style="letter-spacing: 0.7px" class="languagesused">
@@ -44,9 +44,16 @@
 <script>
 import mainbtn from "../helpers/button.vue";
 export default {
-  props: ["iframeurl", "demourl", "githuburl"],
+  props: ["iframeurl", "demourl", "githuburl", "previewurl"],
   components: {
     mainbtn,
   },
+
+  methods: {
+    // Used to render image using props
+    showPreview(img){
+      return require(`../assets/${img}`)
+    }
+  }
 };
 </script>
