@@ -198,6 +198,8 @@ export default {
         from_name: organization,
         to_name: "Ara",
         message: message,
+      }).then(()=> {
+        alert("Message Sent!")
       });
     });
   },
