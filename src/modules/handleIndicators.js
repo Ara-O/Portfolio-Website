@@ -38,8 +38,7 @@ export default function () {
 
   document.querySelectorAll(".indicator").forEach((circle) => {
     circle.addEventListener("click", function () {
-      console.log(circle.dataset.scrollto);
-      document.querySelector("." + circle.dataset.scrollto).scrollIntoView({
+        document.querySelector("." + circle.dataset.scrollto).scrollIntoView({
         behavior: "smooth",
       });
     });

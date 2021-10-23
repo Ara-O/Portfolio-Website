@@ -33,8 +33,7 @@ export default {
     });
 
     document.querySelector(".navbar").addEventListener("click", function (e) {
-      console.log(document.querySelector("" + e.target.dataset.scrollto));
-      document.querySelector(e.target.dataset.scrollto).scrollIntoView({
+       document.querySelector(e.target.dataset.scrollto).scrollIntoView({
         behavior: "smooth",
       });
     });

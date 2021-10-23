@@ -259,8 +259,4 @@ export default {
 };
 </script>
 <style src="../styles/home.scss" lang="scss"></style>
-<style scoped>
-.notificationposition{
-    right: 235px;
-}
-</style>
+ 
