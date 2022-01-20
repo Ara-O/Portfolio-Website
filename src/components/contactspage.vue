@@ -24,7 +24,7 @@
       >
     </section>
     <section class="businesscard">
-      <h3 style="font-size: 38px; letter-spacing: 0.7px">Eyiara Oladipo</h3>
+      <h3 style="font-size: 38px; letter-spacing: 0.7px">Eyiara Oladipo </h3>
 
       <h3 class="extras">Email: Oladipoeyiara@gmail.com</h3>
 
