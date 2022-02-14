@@ -57,7 +57,7 @@ main {
   // padding-top: 90px;
   column-gap: 250px;
   height: auto;
-  // justify-content: center;
+  justify-content: center;
 }
 
 .contactmetext {
@@ -66,7 +66,7 @@ main {
 }
 
 .form-section {
-  margin-left: 194px;
+  //margin-left: 194px;
   padding-bottom: 62px;
 }
 
@@ -106,13 +106,12 @@ main {
   padding: 20px 50px;
   overflow: hidden;
   position: relative;
-  transform: rotate3d(92, 0, -81, 74deg);
   transition: all 750ms ease-in-out;
 }
 
-.businesscard:hover {
-  transform: rotate3d(1, 1, 1, 360deg);
-}
+// .businesscard:hover {
+//   transform: rotate3d(1, 1, 1, 360deg);
+// }
 .extras {
   font-size: 21px;
   letter-spacing: 0.7px;
@@ -120,11 +119,11 @@ main {
 }
 
 .mylogo {
-  position: absolute;
-  width: 242px;
-  right: -43px;
-  bottom: -5px;
-  filter: contrast(6.5) brightness(3.5);
+    position: absolute;
+    width: 242px;
+    right: -21px;
+    bottom: 0px;
+    filter: contrast(6.5) brightness(3.5);
 }
 
 .businesscard h3 a {

@@ -54,6 +54,7 @@
     <h2 style="font-size: 50px; text-align: center; margin-bottom: -8px">
       Projects
     </h2>
+    <h4 class="interaction-note">Interact with the demos to the left</h4>
 
     <!-- MAIN CAROUSEL -->
 
@@ -163,6 +164,22 @@
           </template>
         </project>
       </section>
+      <!-- FOURTH PROJECT -->
+      <section class="project2">
+        <project
+          githuburl="https://github.com/Ara-O/Project_Fit"
+          demourl="https://project-fit.netlify.app/"
+          iframeurl="https://project-fit.netlify.app/"
+          previewurl="project4-preview.png"
+        >
+          <template #projectname>Project Fit</template>
+          <template #toolsused>HTML | CSS | Javascript| Vue.js</template>
+          <template #description>
+            Project Fit is a website that can be used to generate random exercises with sets and repetitions.
+            The advanced variation provides the user to provide an option of selecting their rest time, number of exercises, and difficulty.
+          </template>
+        </project>
+      </section>
     
     </div>
   </section>
@@ -217,8 +234,15 @@ export default {
           desc: "Simulated the landing page of a service designed to reduce food waste  by alerting users whenever their grocery items are about to expire ",
           demo: "https://hungry-yonath-796229.netlify.app",
           github: "https://github.com/Ara-O/Perishabl",
+        },
+        {
+          iframe: "https://project-fit.netlify.app/",
+          projectname: "Project Fit",
+          tools: "HTML | CSS | Javascript | Vue.js",
+          desc: "Project Fit is a website that can be used to generate random exercises with sets and repetitions.The advanced variation provides the user to provide an option of selecting their rest time, number of exercises, and difficulty.",
+          demo: "https://project-fit.netlify.app/",
+          github: "https://github.com/Ara-O/Project_Fit",
         }
-       
       ],
     };
   },

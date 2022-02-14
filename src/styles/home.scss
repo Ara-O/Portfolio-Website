@@ -277,6 +277,13 @@ section.project2 {
   display: none;
 }
 
+.interaction-note{
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: -3px;
+  font-weight: 100;
+}
+
 @media (max-width: 1500px) {
   .bothprojects {
     column-gap: 450px;
@@ -341,6 +348,10 @@ section.project2 {
   .iframes iframe {
     display: none;
   }
+
+  .interaction-note{
+    display: none;
+  }
 }
 
 @media (max-width: 1384px) {
@@ -384,6 +395,8 @@ section.project2 {
   .projects {
     background: linear-gradient(85deg, black 52%, #454545 150%);
   }
+
+
 }
 
 @media (max-width: 1130px) {
@@ -429,6 +442,8 @@ section.project2 {
   .projectdesc {
     width: auto !important;
   }
+
+
 }
 
 @media (max-width: 600px) {
