@@ -173,10 +173,25 @@
           previewurl="project4-preview.png"
         >
           <template #projectname>Project Fit</template>
-          <template #toolsused>HTML | CSS | Javascript| Vue.js</template>
+          <template #toolsused>HTML | CSS | Javascript | Vue.js</template>
           <template #description>
             Project Fit is a website that can be used to generate random exercises with sets and repetitions.
             The advanced variation provides the user to provide an option of selecting their rest time, number of exercises, and difficulty.
+          </template>
+        </project>
+      </section>
+      <!-- FIFTH PROJECT -->
+      <section class="project1">
+        <project
+          githuburl="https://github.com/Ara-O/Budget-App"
+          demourl="https://budgeting-site.netlify.app/"
+          iframeurl="https://budgeting-site.netlify.app/"
+          previewurl="project5-preview.png"
+        >
+          <template #projectname>Budgeting Site</template>
+          <template #toolsused>HTML | CSS | Javascript | Vue.js | Firebase</template>
+          <template #description>
+            Created a website that can be used to track user expenses, income, bills, and money/spending goals. Uses firebase realtime database and authentication to keep track of user data.
           </template>
         </project>
       </section>
@@ -242,6 +257,14 @@ export default {
           desc: "Project Fit is a website that can be used to generate random exercises with sets and repetitions.The advanced variation provides the user to provide an option of selecting their rest time, number of exercises, and difficulty.",
           demo: "https://project-fit.netlify.app/",
           github: "https://github.com/Ara-O/Project_Fit",
+        },
+        {
+          iframe: "https://budgeting-site.netlify.app/",
+          projectname: "Budgeting App",
+          tools: "HTML | CSS | Javascript | Vue.js | Firebase",
+          desc: "Created a website that can be used to track user expenses, income, bills, and money/spending goals. Uses firebase realtime database and authentication to keep track of user data.",
+          demo: "https://budgeting-site.netlify.app/",
+          github: "https://github.com/Ara-O/Budget-App",
         }
       ],
     };
