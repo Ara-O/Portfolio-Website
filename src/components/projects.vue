@@ -6,6 +6,7 @@
       class="project1image"
     />
     <iframe
+      loading="lazy"
       width="1135px"
       height="750px"
       :src="iframeurl"
@@ -16,7 +17,7 @@
   </div>
   <div class="projectdescr">
     <img src="../assets/icons8-arrow-60.png" alt="" class="nextarrow" />
-    <h3 style="font-size: 33px; margin-bottom: -1px;">
+    <h3 style="font-size: 33px; margin-bottom: -1px">
       <slot name="projectname"></slot>
     </h3>
     <h3 style="letter-spacing: 0.7px" class="languagesused">
@@ -51,11 +52,9 @@ export default {
 
   methods: {
     // Used to render image using props
-    showPreview(img){
-      return require(`../assets/${img}`)
-    }
-  }
+    showPreview(img) {
+      return require(`../assets/${img}`);
+    },
+  },
 };
 </script>
-
- 

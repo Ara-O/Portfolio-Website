@@ -33,6 +33,27 @@
             >Contact Me</mainbtn
           >
         </div>
+        <br />
+        <div class="social-logo-section">
+          <a href="https://github.com/Ara-O" target="_blank">
+            <img
+              src="../assets/github-icon.jpg"
+              alt="Github icon"
+              title="Github Account"
+              class="social-logo"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/eyiara-oladipo-2b5ba2180/"
+            target="_blank"
+          >
+            <img
+              src="../assets/linkedin-logo.png"
+              alt="Linkedin icon"
+              title="Linkedin Account"
+              class="social-logo"
+              style="width: 24px"
+          /></a>
+        </div>
       </div>
     </div>
     <div class="threedots">
@@ -116,14 +137,14 @@
 
     <div class="bothprojects">
       <!-- First project -->
-      <section class="project1" >
+      <section class="project1">
         <project
           githuburl="https://github.com/Ara-O/Anime_Finder"
           demourl="https://animesfinder.netlify.app/"
           iframeurl="https://animesfinder.netlify.app/"
           previewurl="project1-preview.png"
         >
-          <template #projectname >Anime Finder</template>
+          <template #projectname>Anime Finder</template>
           <template #toolsused>HTML | CSS | Javascript | Vue.js</template>
           <template #description>
             Used the Vue.js CLI, Javascript, and various API calls, to create a
@@ -132,7 +153,7 @@
           >
         </project>
       </section>
-        <!-- Second project -->
+      <!-- Second project -->
       <section class="project2" style="display: none">
         <project
           githuburl="https://github.com/Ara-O/Windows10-mock"
@@ -143,7 +164,8 @@
           <template #projectname>Windows 10 Clone</template>
           <template #toolsused>HTML | CSS | Javascript | Vue.js</template>
           <template #description>
-            A clone of how Windows 10 looks like. From the lock screen and password page, to the home screen with moveable icons.
+            A clone of how Windows 10 looks like. From the lock screen and
+            password page, to the home screen with moveable icons.
           </template>
         </project>
       </section>
@@ -175,8 +197,10 @@
           <template #projectname>Project Fit</template>
           <template #toolsused>HTML | CSS | Javascript | Vue.js</template>
           <template #description>
-            Project Fit is a website that can be used to generate random exercises with sets and repetitions.
-            The advanced variation provides the user to provide an option of selecting their rest time, number of exercises, and difficulty.
+            Project Fit is a website that can be used to generate random
+            exercises with sets and repetitions. The advanced variation provides
+            the user to provide an option of selecting their rest time, number
+            of exercises, and difficulty.
           </template>
         </project>
       </section>
@@ -189,13 +213,16 @@
           previewurl="project5-preview.png"
         >
           <template #projectname>Budgeting Site</template>
-          <template #toolsused>HTML | CSS | Javascript | Vue.js | Firebase</template>
+          <template #toolsused
+            >HTML | CSS | Javascript | Vue.js | Firebase</template
+          >
           <template #description>
-            Created a website that can be used to track user expenses, income, bills, and money/spending goals. Uses firebase realtime database and authentication to keep track of user data.
+            Created a website that can be used to track user expenses, income,
+            bills, and money/spending goals. Uses firebase realtime database and
+            authentication to keep track of user data.
           </template>
         </project>
       </section>
-    
     </div>
   </section>
   <section class="contactsection">
@@ -234,7 +261,7 @@ export default {
           demo: "https://animesfinder.netlify.app",
           github: "https://github.com/Ara-O/Anime_Finder",
         },
-         {
+        {
           iframe: "https://windows10clone.netlify.app",
           projectname: "Windows 10 Clone",
           tools: "HTML | CSS | Javascript | Vue.js",
@@ -265,7 +292,7 @@ export default {
           desc: "Created a website that can be used to track user expenses, income, bills, and money/spending goals. Uses firebase realtime database and authentication to keep track of user data.",
           demo: "https://budgeting-site.netlify.app/",
           github: "https://github.com/Ara-O/Budget-App",
-        }
+        },
       ],
     };
   },
@@ -306,4 +333,3 @@ export default {
 };
 </script>
 <style src="../styles/home.scss" lang="scss"></style>
- 

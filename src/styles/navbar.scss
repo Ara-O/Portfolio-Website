@@ -32,6 +32,17 @@ ul {
   // }
 }
 
+.social-logo {
+  width: 30px;
+  margin-top: 10px;
+}
+
+.social-logo-section {
+  display: flex;
+  column-gap: 14px;
+  align-items: center;
+}
+
 .red {
   display: inline;
   height: 3px;
