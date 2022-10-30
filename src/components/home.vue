@@ -51,7 +51,7 @@
               alt="Linkedin icon"
               title="Linkedin Account"
               class="social-logo"
-              style="width: 24px"
+              style="width: 21px"
           /></a>
         </div>
       </div>
